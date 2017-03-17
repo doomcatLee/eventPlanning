@@ -1,4 +1,3 @@
-
 public class Event{
   private int mNumOfGuests = 0;
   private int mFoodOption;
