@@ -43,6 +43,28 @@ public class Event{
     return cost;
   }
 
+  public String qualifyDiscount(){
+    String output = "";
+    //if total cost is over 500 free DJ
+    if (mFoodOption == "3" && mBeverageOption == "3" && mEntertainmentOption == "3"){output = "50% off discount! \nCoupon code: 2200";}
+    //if entertainment option is 3
+    else if(mEntertainmentOption == "3"){output = "35% off discount! \nCoupon code: 4400";}
+    // if full option
+    else if (calculateCost() > 500){output = "You qualify for free DJ! \nCoupon code: 5540";}
+
+    return output;
+  }
+
+  public double applyDiscount(String code){
+    double curCost = calculateCost();
+    if (code == "2200"){curCost = curCost * 0.5;}
+    else if (code == "4400"){curCost = curCost * 0.35;}
+    else if (code == "5540"){mEntertainmentOption = "3";curCost -= 500;}
+    else {System.out.println("Invalid code. Make sure you ahve the right code");}
+
+    return curCost;
+  }
+
   //Getters
   public int getNumOfGuests(){
     return mNumOfGuests;
@@ -73,6 +95,6 @@ public class Event{
   }
 
   public String toString(){
-    return "Your event details: " + "\n---------------------\n" + "Number of guests: " + mNumOfGuests + "\nFood option: " + mFoodOption + "\nBeverage option: " + mBeverageOption + "\nEntertainment option: " + mEntertainmentOption;
+    return "Your event details: " + "\n------------------------------------------\n" + "Number of guests: " + mNumOfGuests + "\nFood option: " + mFoodOption + "\nBeverage option: " + mBeverageOption + "\nEntertainment option: " + mEntertainmentOption + "\n------------------------------------------\n" + "Total cost: $" + calculateCost();
   }
 }
