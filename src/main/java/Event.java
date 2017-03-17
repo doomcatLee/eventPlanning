@@ -43,8 +43,6 @@ public class Event{
     return cost;
   }
 
-
-
   //Getters
   public int getNumOfGuests(){
     return mNumOfGuests;
@@ -75,6 +73,6 @@ public class Event{
   }
 
   public String toString(){
-    return "Number of guests: " + mNumOfGuests + ", food option: " + "mFoodOption" + mFoodOption + ", beverage option: " + mBeverageOption + ", entertainment option: " + mEntertainmentOption;
+    return "Your event details: " + "\n---------------------\n" + "Number of guests: " + mNumOfGuests + "\nFood option: " + mFoodOption + "\nBeverage option: " + mBeverageOption + "\nEntertainment option: " + mEntertainmentOption;
   }
 }

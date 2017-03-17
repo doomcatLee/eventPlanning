@@ -46,14 +46,15 @@ public class test{
   }
 
   @Test
-  public void calculateCosts(){
+  public void calculateCost(){
     Event event = new Event(0 ,"", "", "");
 
     event.setNumOfGuests(120);
     event.setFoodOption("2");
-    // event.setNumOfGuests(120);
-    // event.setNumOfGuests(120);
-    int expectedTotal = 450;
+    event.setBeverageOption("1");
+    event.setEntertainmentOption("3");
+    System.out.println(event.toString());
+    int expectedTotal = 850;
 
     assertEquals(expectedTotal, event.calculateCost());
 
