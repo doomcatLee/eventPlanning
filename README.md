@@ -15,9 +15,9 @@ Behavior|Input|Output
 Returns Event Object with properties of # of guests, food type, drink type and entertainment type|none| Event object
 Calculate the current cost using properties of event object| none | event cost
 Check for coupon qualification| none | String to notify users if discount available
-Apply discount | none | discounted cost
+Apply discount using a code | String code | discounted cost
 Get and set event properties| none | properties of Event object
-Return all the event properties in string format | none | Formatted string of properties 
+Return all the event properties in string format | none | Formatted string of properties
 
 ## Setup/Installation Requirements
 ```

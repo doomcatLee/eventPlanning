@@ -11,12 +11,12 @@ public class test{
 
   @Test
   public void testGetters(){
-    Event event = new Event(50, 0, 0, 0);
+    Event event = new Event(50, 30, 30, 15);
 
     int expectedA = 50;
-    int expectedB = 0;
-    int expectedC = 0;
-    int expectedD = 0;
+    int expectedB = 30;
+    int expectedC = 30;
+    int expectedD = 15;
 
     assertEquals(expectedA, event.getNumOfGuests());
     assertEquals(expectedB, event.getFoodOption());
@@ -29,14 +29,14 @@ public class test{
     Event event = new Event(0, 0, 0, 0);
 
     event.setNumOfGuests(50);
-    event.setFoodOption(0);
-    event.setBeverageOption(0);
-    event.setEntertainmentOption(0);
+    event.setFoodOption(20);
+    event.setBeverageOption(15);
+    event.setEntertainmentOption(30);
 
     int expectedA = 50;
-    int expectedB = 0;
-    int expectedC = 0;
-    int expectedD = 0;
+    int expectedB = 20;
+    int expectedC = 15;
+    int expectedD = 30;
 
     assertEquals(expectedA, event.getNumOfGuests());
     assertEquals(expectedB, event.getFoodOption());
@@ -86,7 +86,7 @@ public class test{
 
     // System.out.println(event.calculateCost());
     double expected = 150;
-    assertEquals(expected, event.applyDiscount("2200"), 0.0f);
+    assertEquals(expected, event.applyDiscount(2200), 0.0f);
 
   }
 }
